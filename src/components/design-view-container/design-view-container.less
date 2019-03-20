@@ -1,0 +1,57 @@
+.design-view-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    --bg-color: #f5f5f5;
+    background: var(--bg-color);
+
+    .design-preview-container {
+        flex-grow: 1;
+    }
+
+    .design-area-container {
+        display: flex;
+        width: 540px;
+        min-width: 540px;
+        overflow: hidden;
+        background: rgb(255, 255, 255);
+        box-shadow: rgba(39, 54, 78, 0.11) 0px -2px 30px 0px;
+        transition: margin-right 0.6s;
+
+        .toolbar-container {
+            width: 40px;
+            text-align: center;
+            border-right: 1px solid rgb(242, 243, 244);
+            display: flex;
+            flex-direction: column;
+
+            .toolbar {
+                flex-grow: 1;
+            }
+
+            .buttons {
+                height: 40px;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.6s;
+                cursor: pointer;
+            }
+
+            .buttons.active {
+                transform: rotate(180deg);
+            }
+        }
+
+        .tree-container {
+            width: 250px;
+            border-right: 1px solid rgb(242, 243, 244);
+        }
+
+        .form-container {
+            width: 250px;
+        }
+    }
+}
